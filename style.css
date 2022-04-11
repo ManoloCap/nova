@@ -1,0 +1,85 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url('./images/background.jpeg');
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(4px);
+
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+  background-color:  transparent;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 5%;
+  text-align: center;
+  border-radius: 24px;
+  display:flex;
+  flex-direction: column;
+}
+
+.title-text{
+  color: white;
+  box-sizing: 2px 12px 2px #000;
+  font-size: 72px;
+}
+
+@media only screen and (max-width: 600px) {
+.title-text{
+    font-size: xx-large;
+  }
+  .bg-text {
+    padding: 0%;
+    width: 95%;
+  }
+}
+
+
+.bg-text > div{
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+.bg-text img{
+  max-width: 600px;
+  border-radius: 24px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 2px 0px;
+  width: 100%;
+}
+
+.message-text{
+  color:rgb(235, 235, 235);
+  background-color: rgba(0,0,0, 0.5);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 24px;
+}
